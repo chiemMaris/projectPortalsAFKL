@@ -33,7 +33,7 @@ cameraTrigger.onclick = function() {
 };
 
 cameraSwitch.onclick = function() {
-  
+  //nothing here jet
 }
 
 // Start the video stream when the window loads
