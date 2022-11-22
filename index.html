@@ -3,13 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Name -->
     <title>projectLifelineAFKL</title>
+    <link rel="stylesheet" href="style.css"> 
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   </head>
 
   <body style="margin: 0; overflow: hidden;">
+   
+    <!-- Camera -->
+    <main id="camera">
+        <!-- Camera view -->
+        <video id="camera--view" autoplay playsinline></video>
+       
+        <!-- Camera sensor -->
+        <canvas id="camera--sensor"></canvas>
+        
+        <!-- Camera output -->
+        <img src="//:0" alt="" id="camera--output">
+        
+       <!-- Camera trigger --> 
+        <button id="camera--trigger">Take a picture</button>
+    </main>
+
     <a-scene
         vr-mode-ui="enabled: false"
         embedded
@@ -33,5 +51,7 @@
       
     <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
+
+    <script src="script.js"></script>   
   </body>
 </html>
