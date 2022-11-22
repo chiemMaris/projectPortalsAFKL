@@ -20,11 +20,13 @@
         
         <!-- <a-entity img="./assets/pin.png" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 52.3052370; latitude: 4.8445704;"/> -->
         
-        <a-assets>
+        <!-- <a-assets>
             <img id="pin" src="/assets/pin.png" rotation="0 180 0" scale="100 100 100" gps-entity-place="longitude: 52.3052370; latitude: 4.8445704;">
-        </a-assets>
+        </a-assets> -->
 
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" scale="100 1001 100" gps-entity-place="longitude: 52.3052370; latitude: 4.8445704;"></a-box>
+        <!--- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" scale="100 1001 100" gps-entity-place="longitude: 52.3052370; latitude: 4.8445704;"></a-box> -->
+        
+        <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 52.3052370; latitude: 4.8445704;" animation-mixer/>
 
         <a-camera gps-camera rotation-reader></a-camera>
 	</a-scene>
