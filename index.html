@@ -1,57 +1,55 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Name -->
-    <title>projectLifelineAFKL</title>
-    <link rel="stylesheet" href="style.css"> 
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-  </head>
+<html lang=”en”>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="Camera app">
+		<meta name="apple-mobile-web-app-title" content="Camera app">
 
-  <body style="margin: 0; overflow: hidden;">
-   
-    <!-- Camera -->
-    <main id="camera">
-        <!-- Camera view -->
-        <video id="camera--view" autoplay playsinline></video>
-       
-        <!-- Camera sensor -->
-        <canvas id="camera--sensor"></canvas>
-        
-        <!-- Camera output -->
-        <img src="//:0" alt="" id="camera--output">
-        
-       <!-- Camera trigger --> 
-        <button id="camera--trigger">Take a picture</button>
-    </main>
+		<!-- Name of the app -->
+		<title>projectLifelineAFKL</title>
 
-    <a-scene
-        vr-mode-ui="enabled: false"
-        embedded
-        arjs="sourceType: webcam; debugUIEnabled: false;">
-       
-    <a-text
-        value="Person 1"
-        look-at="[gps-camera]"
-        scale="50 50 50"
-        gps-entity-place="latitude: 52.3054014; longitude: 4.8439431;"
-        color="tomato"
-    ></a-text>
-     
-    <a-text
-        value="Person 2"
-        look-at="[gps-camera]"
-        scale="50 50 50"
-        gps-entity-place="latitude: 52.3052503; longitude: 4.8445697;"
-        color="tomato"
-    ></a-text>
-      
-    <a-camera gps-camera rotation-reader> </a-camera>
-    </a-scene>
+		<!-- Link to site manifest -->
+		<link rel="manifest" href="site.webmanifest">
 
-    <script src="script.js"></script>   
-  </body>
+		<!-- Links to icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#603cba">
+		<meta name="msapplication-TileColor" content="#603cba">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- Link to main style sheet -->
+		<link rel="stylesheet" href="style.css"> 
+	</head>
+	<body>
+
+		<!-- Camera -->
+		<main id="camera">
+
+		    <!-- Camera sensor -->
+		    <canvas id="camera--sensor"></canvas>
+		    
+		    <!-- Camera view -->
+		    <video id="camera--view" autoplay playsinline></video>
+		    
+		    <!-- Camera output -->
+		    <img src="//:0" alt="" id="camera--output">
+
+		    <!-- Camera trigger -->
+		    <button id="camera--trigger">Take a picture</button>
+
+		</main>
+
+		<!-- Reference to your JavaScript file -->
+		<script src="app.js"></script>
+
+		<!-- Reference to adapter.js -->
+		<script src="adapter-min.js"></script>
+
+	</body>
 </html>
